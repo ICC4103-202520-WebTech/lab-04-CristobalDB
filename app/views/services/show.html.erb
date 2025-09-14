@@ -1,0 +1,17 @@
+<h1><%= @service.name %></h1>
+
+<ul>
+  <li><strong>Price:</strong> <%= number_to_currency(@service.price) %></li>
+  <li><strong>Status:</strong>
+    <% if @service.is_active %>
+      <span style="color: green; font-weight: bold;">Active</span>
+    <% else %>
+      <span style="color: #999;">Inactive</span>
+    <% end %>
+  </li>
+</ul>
+
+<%= link_to "Back to services", services_path %> |
+<%= link_to "Rooms", rooms_path %> |
+<%= link_to "Guests", guests_path %> |
+<%= link_to "Reservations", reservations_path %>

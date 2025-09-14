@@ -1,0 +1,13 @@
+<h1>Room <%= @room.number %></h1>
+
+<ul>
+  <li><strong>Type:</strong> <%= @room.room_type %></li>
+  <li><strong>Price:</strong> <%= number_to_currency(@room.price) %></li>
+  <li><strong>Status:</strong> <%= @room.status %></li>
+</ul>
+
+<%= link_to "Back to rooms", rooms_path %> |
+<%= link_to "Guests", guests_path %> |
+<%= link_to "Reservations", reservations_path %> |
+<%= link_to "Services", services_path %>
+

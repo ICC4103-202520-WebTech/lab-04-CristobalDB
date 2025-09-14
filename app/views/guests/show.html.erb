@@ -1,0 +1,12 @@
+<h1><%= [@guest.first_name, @guest.last_name].compact.join(" ") %></h1>
+
+<ul>
+  <li><strong>Email:</strong> <%= @guest.email %></li>
+  <li><strong>Phone:</strong> <%= @guest.phone %></li>
+  <li><strong>Document ID:</strong> <%= @guest.document_id %></li>
+</ul>
+
+<%= link_to "Back to guests", guests_path %> |
+<%= link_to "Rooms", room_path %> |
+<%= link_to "Reservations", reservations_path %> |
+<%= link_to "Services", services_path %>
